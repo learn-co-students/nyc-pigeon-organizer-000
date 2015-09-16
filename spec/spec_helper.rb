@@ -9,3 +9,5 @@ require_relative '../nyc_pigeon_organizer'
 RSpec.configure do |config|
   # config here
 end
+
+#more commented out stuff.
