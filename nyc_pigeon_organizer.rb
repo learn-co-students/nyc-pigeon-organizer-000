@@ -23,8 +23,8 @@ def nyc_pigeon_organizer(data)
   	data.each do |set, step| # set is color gender lives, step is the hashes and keys contained
   		step.each do |subset, list| # subset is the hash, list is the key each of which is an array
   			list.each do |name|	# each name in the array
-  				hash[name] = {} unless hash[name]
-  				hash[name][set] = [] unless hash[name][set]
+  				hash[name] ||= {} 
+  				hash[name][set] ||= [] 
   				hash[name][set] << subset.to_s
   			end
 		end
